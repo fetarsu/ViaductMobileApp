@@ -1,7 +1,10 @@
 ﻿namespace ViaductMobile.Enums
 {
-    public class TriggerCashState
+    public enum TriggerCashState
     {
-        
+        CompareWithPreviousDay,
+        NewOperation,
+        CloseDay,
+        OpenDayAgain
     }
 }

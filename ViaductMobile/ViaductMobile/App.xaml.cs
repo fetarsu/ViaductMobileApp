@@ -1,4 +1,5 @@
 ﻿using System;
+using ViaductMobile.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,7 +10,6 @@ namespace ViaductMobile
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 

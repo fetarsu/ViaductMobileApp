@@ -2,12 +2,21 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ViaductMobile.ViewModels;assembly=ViaductMobile"
              x:Class="ViaductMobile.Views.ReportView">
+    <ContentPage.BindingContext>  
+        <local:ReportViewModel />
+    </ContentPage.BindingContext> 
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Hello, world!"
+            <Label x:Name="stateLabel" Text="{Binding ReportState}"
                    VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
+                   HorizontalOptions="CenterAndExpand"/>
+            
+            <Button Text="Rozpoczecie dnia" Command="{Binding StartCommand}"></Button>
+            <Button Text="Dodanie operacji" Command="{Binding AddCommand}"></Button>
+            <Button Text="Zamkniecie dnia" Command="{Binding CloseCommand}"></Button>
+            <Button Text="Ponowne otworzenie dnia" Command="{Binding ReopenCommand}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

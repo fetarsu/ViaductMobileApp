@@ -1,29 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ViaductMobile.Views;assembly=ViaductMobile" 
              x:Class="ViaductMobile.MainPage">
-    <ContentPage Title="Dostawy" Icon="deliveryIcon.png">
+    <local:DelivererView Title="Dostawy" Icon="deliveryIcon.png">
         <ContentPage.Content>
             <StackLayout>
                 <Label Text="Dostawy"></Label>
             </StackLayout>
         </ContentPage.Content>
-    </ContentPage>
+    </local:DelivererView>
     
-    <ContentPage Title="Raport" Icon="reportIcon.png">
-        <ContentPage.Content>
-            <StackLayout>
-                <Label Text="Dostawy"></Label>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
+    <local:ReportView Title="Raport" Icon="reportIcon.png">
+    </local:ReportView>
     
-    <ContentPage Title="Uzytkownik" Icon="userIcon.png">
+    <local:UserPage Title="Uzytkownik" Icon="userIcon.png">
         <ContentPage.Content>
             <StackLayout>
                 <Label Text="Dostawy"></Label>
             </StackLayout>
         </ContentPage.Content>
-    </ContentPage>
+    </local:UserPage>
 
 </TabbedPage>

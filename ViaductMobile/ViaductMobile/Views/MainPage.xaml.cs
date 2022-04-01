@@ -13,21 +13,9 @@ namespace ViaductMobile
 {
     public partial class MainPage : TabbedPage
     {
-        private readonly UserService _userService = new UserService();
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private async void Button_OnClicked(object sender, EventArgs e)
-        {
-
-            var use2r = new User()
-            {
-                Name = "test233"
-            };
-
-            var newUser = await _userService.AddUser(use2r);
         }
     }
 }
